@@ -31,32 +31,32 @@ public class EmployeeController {
 	}
 	
 	@GetMapping("employee/findById/{id}")
-	public Employee findById(@PathVariable int id) {
+	public ResponseEntity<ResponseStructure<Employee>> findById(@PathVariable int id) {
 		return employeeService.findById(id);
 	}
 	
 	@GetMapping("employee/findByEmail/{email}")
-	public Employee findByEmail(@PathVariable String email) {
+	public ResponseEntity<ResponseStructure<Employee>> findByEmail(@PathVariable String email) {
 		return employeeService.findByEmail(email);
 	}
 	
 	@GetMapping("employee/findByDepartmentAndAge/{department}/{age}")
-	public List<Employee> findByDepartmentAndAge(@PathVariable String department, @PathVariable int age){
+	public ResponseEntity<ResponseStructure<List<Employee>>> findByDepartmentAndAge(@PathVariable String department, @PathVariable int age){
 		return employeeService.findByDepartmentAndAge(department, age);
 	}
 	
 	@GetMapping("employee/findAll")
-	public List<Employee> findAll(){
+	public ResponseEntity<ResponseStructure<List<Employee>>> findAll(){
 		return employeeService.findAll();
 	}
 	
 	@PutMapping("employee/updateEmployee/{id}")
-	public Employee updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
+	public ResponseEntity<ResponseStructure<Employee>> updateEmployee(@PathVariable int id, @RequestBody Employee employee) {
 		return employeeService.updateEmployee(id, employee);
 	}
 	
 	@DeleteMapping("employee/deleteEmployee/{id}")
-	public Employee deleteEmployee(@PathVariable int id) {
+	public ResponseEntity<ResponseStructure<Employee>> deleteEmployee(@PathVariable int id) {
 		return employeeService.deleteEmployee(id);
 	}
 }
