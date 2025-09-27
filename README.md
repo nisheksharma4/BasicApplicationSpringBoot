@@ -36,9 +36,28 @@ public class ResponseStructure<T> {
 - ResponseStructure<Employee> responseStructure = new ResponseStructure<Employee>(HttpStatus.CREATED.value(), "Employee Added Successfully!", emp);
 		
   	return new ResponseEntity<ResponseStructure<Employee>>(responseStructure, HttpStatus.CREATED);
+
+
+
+  
 	
 
 - In short:-
 - ResponseStructure → defines body format.  
+
+
+## Employee API Screenshots
+
+![Save Employee](images/saveEmployee.png)
+![Find All Employees](images/findAll.png)
+![Find By ID](images/findById.png)
+![Find By ID ](images/findById(1).png)
+![Find By Email](images/findByEmail.png)
+![Find By Email ](images/findByEmail(1).png)
+![Find By Department and Age](images/findByDepartmentAndAge.png)
+![Update Employee](images/updateEmployee.png)
+![Update Employee](images/updateEmployee(1).png)
+![Delete Employee](images/deleteEmployee.png)
+
 
 - ResponseEntity → wraps ResponseStructure + controls HTTP response (status, headers, body).
