@@ -46,31 +46,31 @@ public class ResponseStructure<T> {
 - ResponseStructure → defines body format.
 - ResponseEntity → wraps ResponseStructure + controls HTTP response (status, headers, body).
 
-## Employee API Screenshots
+# Employee API Screenshots
 
 # Save Employee
 This API is used to add a new employee into the database.  
 ![Save Employee](images/saveEmployee.png)
 
-# Find All Employees
+## Find All Employees
 This API fetches the complete list of employees from the database.  
 ![Find All Employees](images/findAll.png)
 
-# Find Employee By ID
-This API retrieves employee details using their unique ID.  
+## Find Employee By ID
+This API retrieves employee details using their unique ID and returns StatusCode = 404 and Message = "Something went Wrong :(".  
 ![Find By ID](images/findById.png)
 
 ### Example: Find By ID (1)
-Fetches employee details with ID = 1.  
+Fetches employee details with ID = 11.  
 ![Find By ID (example 1)](images/findById(1).png)
 
 ## Find Employee By Email
-This API retrieves employee details using their email.  
+This API retrieves employee details using their email and returns StatusCode = 404 and Message = "Something went Wrong :("..  
 ![Find By Email](images/findByEmail.png)
 
 ### Example: Find By Email (1)
 Fetches employee with the given email.  
-![Find By Email (example 1)](images/findByEmail(1).png)
+![Find By Email](images/findByEmail(1).png)
 
 ## Find Employee By Department and Age
 This API filters employees based on their department and age.  
@@ -81,7 +81,7 @@ This API updates the details of an existing employee.
 ![Update Employee](images/updateEmployee.png)
 
 ### Example: Update Employee (1)
-Updates the employee with ID = 1.  
+Updates the employee with ID = 100 and returns StatusCode = 404 and Message = "Something went Wrong :(".  
 ![Update Employee (example 1)](images/updateEmployee(1).png)
 
 ## Delete Employee
