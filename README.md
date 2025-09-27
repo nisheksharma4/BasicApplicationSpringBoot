@@ -43,21 +43,49 @@ public class ResponseStructure<T> {
 	
 
 - In short:-
-- ResponseStructure → defines body format.  
-
+- ResponseStructure → defines body format.
+- ResponseEntity → wraps ResponseStructure + controls HTTP response (status, headers, body).
 
 ## Employee API Screenshots
 
+# Save Employee
+This API is used to add a new employee into the database.  
 ![Save Employee](images/saveEmployee.png)
+
+# Find All Employees
+This API fetches the complete list of employees from the database.  
 ![Find All Employees](images/findAll.png)
+
+# Find Employee By ID
+This API retrieves employee details using their unique ID.  
 ![Find By ID](images/findById.png)
-![Find By ID ](images/findById(1).png)
+
+### Example: Find By ID (1)
+Fetches employee details with ID = 1.  
+![Find By ID (example 1)](images/findById(1).png)
+
+## Find Employee By Email
+This API retrieves employee details using their email.  
 ![Find By Email](images/findByEmail.png)
-![Find By Email ](images/findByEmail(1).png)
+
+### Example: Find By Email (1)
+Fetches employee with the given email.  
+![Find By Email (example 1)](images/findByEmail(1).png)
+
+## Find Employee By Department and Age
+This API filters employees based on their department and age.  
 ![Find By Department and Age](images/findByDepartmentAndAge.png)
+
+## Update Employee
+This API updates the details of an existing employee.  
 ![Update Employee](images/updateEmployee.png)
-![Update Employee](images/updateEmployee(1).png)
+
+### Example: Update Employee (1)
+Updates the employee with ID = 1.  
+![Update Employee (example 1)](images/updateEmployee(1).png)
+
+## Delete Employee
+This API deletes an employee record from the database using ID.  
 ![Delete Employee](images/deleteEmployee.png)
 
 
-- ResponseEntity → wraps ResponseStructure + controls HTTP response (status, headers, body).
